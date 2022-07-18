@@ -39,16 +39,14 @@ def update_data():
 
 
 def delete_data():
-    data = {'id': 4 }
+    data = {'id': 4}
     json_data = json.dumps(data)
     r = requests.delete(url=URL, data=json_data)
     content = r.json()
     print(content)
 
-
 # Method Calling
-
 # get_data(2)
 # post_data()
 # update_data()
-delete_data()
+# delete_data()
