@@ -1,5 +1,6 @@
 from django.forms import forms
 from rest_framework import serializers
+from .models import Student
 
 
 class StudentSerializer(serializers.Serializer):
@@ -7,9 +8,6 @@ class StudentSerializer(serializers.Serializer):
     roll = serializers.IntegerField()
     city = serializers.CharField(max_length=100)
 
-
-# class StudentForm(forms.Form):
-#     name = forms.CharField(max_length=100)
-#     roll = forms.IntegerField()
-#     city = forms.CharField(max_length=100)
+    def create(self, validated_data):
+        return Student.objects.create(**validated_data)
 
