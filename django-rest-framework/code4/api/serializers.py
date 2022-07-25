@@ -32,3 +32,4 @@ class Student_Serializer(serializers.ModelSerializer):
         if name.lower() == 'rohit' and city.lower() != 'ranchi':
             raise serializers.ValidationError('City must be ranchi')
         return attrs
+
