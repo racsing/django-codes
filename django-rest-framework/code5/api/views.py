@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 
-
+s
 @method_decorator(csrf_exempt, name='dispatch')
 class StudentApi(APIView):
     # GET REQUEST
